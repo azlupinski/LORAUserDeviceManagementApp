@@ -34,7 +34,6 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 
 		http.authorizeRequests()
 			.antMatchers("/devices/**").hasAnyRole("USER","ADMIN")
-//			.antMatchers("/login/**").hasAnyRole("USER","ADMIN")
 				.antMatchers("/users/showRegistrationForm").permitAll()
 				.antMatchers("/users/processRegistrationForm").permitAll()
 				.antMatchers("/api/devices/**").permitAll()

@@ -42,13 +42,6 @@ public class UserController {
 		
 	}
 
-//	@GetMapping("/logout")
-//	public String logout(HttpSession session){
-//		session.invalidate();
-//
-//
-//		return "index";
-//	}
 
 
 
@@ -171,7 +164,7 @@ public class UserController {
 
 
 
-		//send over to our form
+		//send over to form
 
 		return "users/update-registration-form-for-regular-user";
 

@@ -31,9 +31,7 @@ public class User {
 	@Column(name = "email")
 	private String email;
 
-	public boolean isAdmin(){
-		return  this.roles.contains("ROLE_ADMIN");
-	}
+
 
 
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -149,12 +147,6 @@ public class User {
 		this.roles = roles;
 	}
 
-//	@Override
-//	public String toString() {
-//		return "user{" + "id=" + id + ", userName='" + userName + '\'' + ", password='" + "*********" + '\''
-//				+ ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", email='" + email + '\''
-//				+ ", roles=" + roles + '}';
-//	}
 
 
 	@Override

@@ -32,12 +32,9 @@ public class HomeController {
 
 		User userAdmin = (User)httpSession.getAttribute("user");
 
-//		List<User> theUsers = userService.getUserList(userAdmin.getAccount().getId());
 		List<Device> theDevices = deviceService.getDeviceList(userAdmin.getAccount().getId());
-//
-//		theModel.addAttribute("users",theUsers);
+
 		theModel.addAttribute("devices",theDevices);
-//
 
 		return "home";
 	}
@@ -75,21 +72,6 @@ public class HomeController {
 
 		return "devices/device-table";
 	}
-
-//	@GetMapping("/deviceTableOnHome")
-//	public String deviceTableOnHome(Model theModel, HttpSession httpSession){
-//
-//			User userAdmin = (User) httpSession.getAttribute("user");
-//
-//			List<Device> theDevices = deviceService.getDeviceList(userAdmin.getAccount().getId());
-//
-//
-//			theModel.addAttribute("devices", theDevices);
-//
-//
-//			return "redirect:/myAccount";
-//
-//		}
 
 }
 
